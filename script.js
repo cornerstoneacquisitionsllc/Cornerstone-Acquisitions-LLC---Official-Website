@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (contactForm) {
         contactForm.addEventListener("submit", async (e) => {
             e.preventDefault();
+            console.log('Form submitted:', { name, email, phone, message });
+
 
             const data = {
                 name: contactForm.name.value,
