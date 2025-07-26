@@ -1,0 +1,268 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornerstone Acquisitions LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-stone-800 text-stone-300 font-sans">
+
+    <!-- Header -->
+    <header class="bg-stone-800/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-stone-100">Cornerstone<span class="text-emerald-400">.</span></a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#buy-sell" class="hover:text-emerald-400 transition-colors">Buy</a>
+                <a href="#buy-sell" class="hover:text-emerald-400 transition-colors">Sell</a>
+                <a href="#about" class="hover:text-emerald-400 transition-colors">About Us</a>
+                <a href="#careers" class="hover:text-emerald-400 transition-colors">Careers</a>
+                <a href="#contact" class="bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-semibold px-4 py-2 rounded-lg transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-stone-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#buy-sell" class="block py-2 px-6 text-sm hover:bg-stone-700">Buy / Sell</a>
+            <a href="#about" class="block py-2 px-6 text-sm hover:bg-stone-700">About Us</a>
+            <a href="#careers" class="block py-2 px-6 text-sm hover:bg-stone-700">Careers</a>
+            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-stone-700">Contact</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-[60vh] flex items-center">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('hero-background.png');">
+                <div class="absolute inset-0 bg-stone-900/70"></div>
+            </div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold text-stone-100 leading-tight">Your Cornerstone for Real Estate Success</h1>
+                <p class="mt-4 text-lg md:text-xl text-stone-300 max-w-3xl mx-auto">We connect motivated sellers with qualified buyers, creating seamless, profitable wholesale real estate transactions.</p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="#buy-sell" class="bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-semibold px-8 py-3 rounded-lg transition-colors text-lg">Find Properties</a>
+                    <a href="#contact" class="bg-stone-600 hover:bg-stone-700 text-stone-100 font-semibold px-8 py-3 rounded-lg transition-colors text-lg">Sell Your Property</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- "How It Works" Section -->
+        <section id="buy-sell" class="py-20 bg-stone-700">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-stone-100">Who We Work With & How It Works</h2>
+                    <p class="mt-4 text-stone-300 max-w-2xl mx-auto">Whether you're looking to sell a property quickly or find your next investment, we have a streamlined process for you.</p>
+                </div>
+                
+                <div class="flex justify-center mb-8">
+                    <div class="bg-stone-800 p-1 rounded-lg flex space-x-1">
+                        <button id="sellers-btn" class="px-6 py-2 rounded-md text-sm font-medium transition-colors bg-emerald-600 text-white">For Sellers</button>
+                        <button id="buyers-btn" class="px-6 py-2 rounded-md text-sm font-medium transition-colors text-stone-300 hover:bg-stone-600">For Buyers</button>
+                    </div>
+                </div>
+
+                <div id="sellers-content" class="grid md:grid-cols-3 gap-8 text-center transition-opacity duration-300">
+                    <div class="bg-stone-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-emerald-400 mb-2">1. Submit Your Property</h3>
+                        <p class="text-stone-400">Fill out our simple form with your property details. It's fast, free, and confidential.</p>
+                    </div>
+                    <div class="bg-stone-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-emerald-400 mb-2">2. Get a Fair Offer</h3>
+                        <p class="text-stone-400">We'll assess your property and present you with a no-obligation cash offer quickly.</p>
+                    </div>
+                    <div class="bg-stone-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-emerald-400 mb-2">3. Close On Your Time</h3>
+                        <p class="text-stone-400">If you accept, we'll handle the paperwork and close on your schedule. No repairs, no fees.</p>
+                    </div>
+                </div>
+
+                <div id="buyers-content" class="hidden grid md:grid-cols-3 gap-8 text-center transition-opacity duration-300">
+                    <div class="bg-stone-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-emerald-400 mb-2">1. Join Our List</h3>
+                        <p class="text-stone-400">Sign up to get exclusive access to our list of off-market investment properties.</p>
+                    </div>
+                    <div class="bg-stone-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-emerald-400 mb-2">2. Review Deals</h3>
+                        <p class="text-stone-400">We send you properties that match your criteria, complete with all the necessary details.</p>
+                    </div>
+                    <div class="bg-stone-800 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-emerald-400 mb-2">3. Make Your Move</h3>
+                        <p class="text-stone-400">Found the right one? We'll help you secure the deal and move toward a fast, easy closing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- "How We Help You" Section -->
+        <section id="features" class="py-20 bg-stone-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-stone-100">How We Help You</h2>
+                    <p class="mt-4 text-stone-300 max-w-2xl mx-auto">We provide unique advantages for both property sellers and cash buyers.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.75A.75.75 0 013 4.5h.75m0 0h.75A.75.75 0 015.25 6v.75m0 0v.75A.75.75 0 014.5 8.25h-.75m0 0H3.75a.75.75 0 01-.75-.75V7.5m0 0v-.75A.75.75 0 013 6h.75M7.5 12h.008v.008H7.5V12zm.75 3.75h.008v.008H8.25v-.008zm.75 3.75h.008v.008h-.008v-.008zm0-9.75h.008v.008h-.008V6zm-3.75 0h.008v.008H4.5V6zm0 3.75h.008v.008H4.5v-.008zm0 3.75h.008v.008H4.5v-.008zm0 3.75h.008v.008H4.5v-.008zm3-3.75h.008v.008H7.5v-.008zm3 3.75h.008v.008h-.008v-.008zm-3-3.75h.008v.008H7.5v-.008zm-3 0h.008v.008H4.5V12zm3 0h.008v.008H7.5V12zm3 0h.008v.008h-.008V12zm3-3.75h.008v.008h-.008V8.25zm0 3.75h.008v.008h-.008V12zm0 3.75h.008v.008h-.008v-.008zm3-3.75h.008v.008h-.008V12zm0-3.75h.008v.008h-.008V8.25zm-3 0h.008v.008h-.008V8.25zm-3 0h.008v.008h-.008V8.25zm9-3.75h.008v.008h-.008V4.5zm0 3.75h.008v.008h-.008V8.25zm0 3.75h.008v.008h-.008V12zm-3.75 3.75h.008v.008h-.008v-.008zm0-9.75h.008v.008h-.008V6z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-stone-100">Fast Cash Offers</h3>
+                            <p class="mt-1 text-stone-400">Sellers receive competitive cash offers, eliminating financing contingencies and delays.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.75M9 11.25h6.75M9 15.75h6.75" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-stone-100">Exclusive Inventory</h3>
+                            <p class="mt-1 text-stone-400">Buyers get access to off-market properties they won't find anywhere else.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-stone-100">No Hassle, No Fees</h3>
+                            <p class="mt-1 text-stone-400">We buy properties as-is. No need for repairs, cleaning, or agent commissions.</p>
+                        </div>
+                    </div>
+                     <!-- Feature 4 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.158.79.44 1.059l.29.289c.282.282.662.44 1.06.44s.778-.158 1.06-.44l.29-.289c.282-.28.44-.645.44-1.059 0-.23-.035-.454-.1-.664M6.75 8.25l4.5 4.5 4.5-4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-stone-100">Deeply Discounted Prices</h3>
+                            <p class="mt-1 text-stone-400">Our investor partners benefit from properties priced significantly below market value.</p>
+                        </div>
+                    </div>
+                     <!-- Feature 5 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-stone-100">Flexible Closing</h3>
+                            <p class="mt-1 text-stone-400">Sellers choose a closing date that works for them, providing certainty and control.</p>
+                        </div>
+                    </div>
+                     <!-- Feature 6 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-stone-100">Expert Team</h3>
+                            <p class="mt-1 text-stone-400">Our experienced team handles the complexities, ensuring a smooth process for all parties.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-stone-700">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-stone-100">Built on a Foundation of Trust</h2>
+                        <p class="mt-4 text-stone-300">Cornerstone Acquisitions LLC was founded on the principles of integrity, transparency, and creating win-win scenarios. We believe that real estate transactions can be simple, fair, and beneficial for everyone involved. Our mission is to provide a reliable and efficient marketplace for off-market properties, connecting sellers who need a fast, hassle-free sale with investors looking for their next great opportunity.</p>
+                        <p class="mt-4 text-stone-300">We are more than just wholesalers; we are problem-solvers and relationship-builders dedicated to serving our community.</p>
+                        <a href="#contact" class="mt-6 inline-block bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-semibold px-6 py-3 rounded-lg transition-colors">Learn More About Us</a>
+                    </div>
+                    <div>
+                        <img src="about-us-image.png" alt="A modern building with architectural details" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-stone-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-stone-100">What Our Partners Say</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-stone-700 p-6 rounded-lg">
+                        <p class="text-stone-300 italic">"The process was unbelievably fast and simple. I got a fair cash offer for my inherited property without any of the usual stress. Highly recommend Cornerstone."</p>
+                        <div class="mt-4 font-semibold text-emerald-400">- Sarah J., Property Seller</div>
+                    </div>
+                     <!-- Testimonial 2 -->
+                    <div class="bg-stone-700 p-6 rounded-lg">
+                        <p class="text-stone-300 italic">"As an investor, getting access to their deal flow has been a game-changer. The properties are exactly as described and the numbers always make sense."</p>
+                        <div class="mt-4 font-semibold text-emerald-400">- Mark T., Real Estate Investor</div>
+                    </div>
+                     <!-- Testimonial 3 -->
+                    <div class="bg-stone-700 p-6 rounded-lg">
+                        <p class="text-stone-300 italic">"I needed to sell quickly due to a job relocation. The team at Cornerstone was professional, compassionate, and closed in under two weeks. A lifesaver!"</p>
+                        <div class="mt-4 font-semibold text-emerald-400">- David L., Property Seller</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Careers Section -->
+        <section id="careers" class="py-20 bg-stone-700">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-stone-100">Join Our Team</h2>
+                 <p class="mt-4 text-stone-300 max-w-2xl mx-auto">We are always looking for talented and driven individuals to join the Cornerstone family. If you have a passion for real estate and helping people, we'd love to hear from you.</p>
+                 <a href="#contact" class="mt-6 inline-block bg-stone-600 hover:bg-stone-500 text-stone-100 font-semibold px-8 py-3 rounded-lg transition-colors text-lg">See Open Positions</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-stone-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-stone-100">Get In Touch</h2>
+                    <p class="mt-4 text-stone-300 max-w-2xl mx-auto">Have a question or a property to discuss? Send us a message and we'll get back to you promptly.</p>
+                </div>
+                <form class="max-w-xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" placeholder="Your Name" class="w-full bg-stone-700 text-stone-200 border-stone-600 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        <input type="email" placeholder="Your Email" class="w-full bg-stone-700 text-stone-200 border-stone-600 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    </div>
+                    <div class="mb-6">
+                         <input type="tel" placeholder="Your Phone Number" class="w-full bg-stone-700 text-stone-200 border-stone-600 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    </div>
+                    <div class="mb-6">
+                        <textarea placeholder="Your Message" rows="5" class="w-full bg-stone-700 text-stone-200 border-stone-600 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-bold py-3 px-8 rounded-lg transition-colors">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <a href="#home" class="text-xl font-bold text-stone-100">Cornerstone Acquisitions LLC</a>
+            <div class="flex justify-center space-x-6 mt-6">
+                <a href="#buy-sell" class="hover:text-emerald-400 transition-colors">Buy/Sell</a>
+                <a href="#about" class="hover:text-emerald-400 transition-colors">About</a>
+                <a href="#careers" class="hover:text-emerald-400 transition-colors">Careers</a>
+                <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+            </div>
+            <p class="mt-8 text-sm">&copy; 2024 Cornerstone Acquisitions LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

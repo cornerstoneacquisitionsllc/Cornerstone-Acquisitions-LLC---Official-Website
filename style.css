@@ -1,0 +1,5 @@
+/* Using Tailwind for all styles, but this file is here for any future custom CSS. */
+html {
+    scroll-behavior: smooth;
+}
+
