@@ -15,6 +15,35 @@ document.addEventListener('DOMContentLoaded', function () {
             sellersBtn.classList.remove('text-stone-300', 'hover:bg-stone-600');
             buyersBtn.classList.remove('bg-emerald-600', 'text-white');
             buyersBtn.classList.add('text-stone-300', 'hover:bg-stone-600');
+
+    // Form submission logic
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const data = {
+                name: contactForm.name.value,
+                email: contactForm.email.value,
+                phone: contactForm.phone.value,
+                message: contactForm.message.value
+            };
+
+            const response = await fetch("https://script.google.com/macros/s/AKfycbyJE7bIxvepkQ3pqoEupT0wMwqkAvWPzZKmH6wfKYTOiACgTWnj0iSN1sS5prM7nddhRA/exec", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                alert("Thanks! Your message has been sent.");
+                contactForm.reset();
+            } else {
+                alert("Oops! Something went wrong. Try again later.");
+            }
+        });
+    }
+
         });
 
         buyersBtn.addEventListener('click', () => {
