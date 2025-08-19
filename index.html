@@ -27,8 +27,8 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-2xl font-bold text-stone-100">Cornerstone<span class="text-emerald-400">.</span></a>
                         <div class="hidden md:flex items-center space-x-8">
-                <a id="nav-buy" href="#buy-sell" class="hover:text-emerald-400 transition-colors">Buy</a>
                 <a id="nav-sell" href="#buy-sell" class="hover:text-emerald-400 transition-colors">Sell</a>
+                <a id="nav-buy" href="#buy-sell" class="hover:text-emerald-400 transition-colors">Buy</a>
                 <a href="#about" class="hover:text-emerald-400 transition-colors">About Us</a>
                 <a href="#careers" class="hover:text-emerald-400 transition-colors">Careers</a>
                 <a href="#privacy" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
@@ -41,8 +41,8 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
-            <a id="m-buy" href="#buy-sell" class="block py-2 px-6 text-sm hover:bg-stone-700">Buy</a>
             <a id="m-sell" href="#buy-sell" class="block py-2 px-6 text-sm hover:bg-stone-700">Sell</a>
+            <a id="m-buy" href="#buy-sell" class="block py-2 px-6 text-sm hover:bg-stone-700">Buy</a>
             <a href="#about" class="block py-2 px-6 text-sm hover:bg-stone-700">About Us</a>
             <a href="#careers" class="block py-2 px-6 text-sm hover:bg-stone-700">Careers</a>
             <a href="#privacy" class="block py-2 px-6 text-sm hover:bg-stone-700">Privacy Policy</a>
@@ -272,6 +272,7 @@
     <script src="script.js"></script>
 
 <script>
+
 document.addEventListener('DOMContentLoaded', function () {
   function activate(mode) {
     const sellersBtn = document.getElementById('sellers-btn');
@@ -279,43 +280,121 @@ document.addEventListener('DOMContentLoaded', function () {
     const sellers = document.getElementById('sellers-content');
     const buyers  = document.getElementById('buyers-content');
     if (!sellersBtn || !buyersBtn || !sellers || !buyers) return;
+
     const activeClasses = ['bg-emerald-600','text-white'];
     const inactiveClasses = ['text-stone-300','hover:bg-stone-600'];
+
     if (mode === 'sell') {
       sellersBtn.classList.add(...activeClasses);
       sellersBtn.classList.remove(...inactiveClasses);
       buyersBtn.classList.remove(...activeClasses);
       buyersBtn.classList.add(...inactiveClasses);
-      sellers.style.display = '';
-      buyers.style.display = 'none';
+      sellers.classList.remove('hidden');
+      buyers.classList.add('hidden');
     } else { // buy
       buyersBtn.classList.add(...activeClasses);
       buyersBtn.classList.remove(...inactiveClasses);
       sellersBtn.classList.remove(...activeClasses);
       sellersBtn.classList.add(...inactiveClasses);
-      buyers.style.display = '';
-      sellers.style.display = 'none';
+      buyers.classList.remove('hidden');
+      sellers.classList.add('hidden');
     }
   }
-  // Hook header and mobile links
+
+  // Header and mobile links -> scroll and toggle
   const navBuy = document.getElementById('nav-buy');
   const navSell = document.getElementById('nav-sell');
   const mBuy = document.getElementById('m-buy');
   const mSell = document.getElementById('m-sell');
+
   [navBuy, mBuy].forEach(el => el && el.addEventListener('click', () => setTimeout(()=>activate('buy'), 0)));
   [navSell, mSell].forEach(el => el && el.addEventListener('click', () => setTimeout(()=>activate('sell'), 0)));
 
-  // Also hook the in-section buttons if they exist
+  // In-section buttons
   const sellersBtn = document.getElementById('sellers-btn');
   const buyersBtn  = document.getElementById('buyers-btn');
   sellersBtn && sellersBtn.addEventListener('click', () => activate('sell'));
   buyersBtn && buyersBtn.addEventListener('click', () => activate('buy'));
 
-  // Ensure initial state favors sellers by default (as in your current design)
+  // Default state (sellers visible)
   activate('sell');
 });
 </script>
 
+
 <script src="script.js"></script>
+<section id="privacy" class="py-20 bg-stone-700">
+<h1 class="text-3xl md:text-4xl font-bold text-stone-100">Privacy Policy</h1>
+    <p class="mt-2 text-stone-400">Effective Date: <span class="font-medium">[Insert Date]</span></p>
+
+    <p class="mt-6">Cornerstone Acquisitions LLC (“Company,” “we,” “our,” or “us”) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit <span class="font-mono">cornerstoneacquisitionsllc.com</span> or interact with our services, including SMS communications.</p>
+
+    <h2 class="mt-8 text-2xl font-semibold text-stone-100">Information We Collect</h2>
+    <ul class="list-disc pl-6 mt-3 space-y-2 text-stone-300">
+      <li><span class="font-semibold">Personal Information:</span> Name, email, phone number, mailing address, and any details you provide via forms.</li>
+      <li><span class="font-semibold">Technical Information:</span> IP address, device/browser type, pages visited, cookies, and similar technologies.</li>
+    </ul>
+
+    <h2 class="mt-8 text-2xl font-semibold text-stone-100">How We Use Your Information</h2>
+    <ul class="list-disc pl-6 mt-3 space-y-2 text-stone-300">
+      <li>Respond to inquiries, send requested information, and manage transactions.</li>
+      <li>Send SMS notifications or alerts when you opt in.</li>
+      <li>Improve website performance and user experience.</li>
+      <li>Comply with legal obligations and enforce our agreements.</li>
+    </ul>
+
+    <h2 class="mt-8 text-2xl font-semibold text-stone-100">How We Share Your Information</h2>
+    <p class="mt-3">We do not sell or rent your personal information. We may share information with service providers who assist with operations (e.g., hosting, analytics, customer support) under confidentiality obligations.</p>
+    <div class="mt-4 p-4 rounded-lg bg-stone-900 border border-stone-700">
+      <p class="text-stone-300"><span class="font-semibold">Carrier-Required SMS Clause:</span> All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, excluding aggregators and providers of the Text Message services.</p>
+    </div>
+
+    <h2 class="mt-8 text-2xl font-semibold text-stone-100">SMS Privacy</h2>
+    <ul class="list-disc pl-6 mt-3 space-y-2 text-stone-300">
+      <li>Mobile information will not be shared with third parties/affiliates for marketing or promotional purposes.</li>
+      <li>Information may be shared with subcontractors for support services (e.g., customer service) consistent with this Policy.</li>
+      <li>You may opt out at any time by replying <span class="font-mono">STOP</span>. For assistance, reply <span class="font-mono">HELP</span> or email <a class="text-emerald-400 underline" href="mailto:outreach@cornerstoneacquisitionsllc.com">outreach@cornerstoneacquisitionsllc.com</a>.</li>
+    </ul>
+
+    <h2 class="mt-8 text-2xl font-semibold text-stone-100">Data Security</h2>
+    <p class="mt-3">We implement reasonable administrative, technical, and physical safeguards designed to protect personal information. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+
+    <h2 class="mt-8 text-2xl font-semibold text-stone-100">Your Choices & Rights</h2>
+    <p class="mt-3">You may request access, correction, or deletion of your personal information by contacting us.</p>
+
+    <h2 class="mt-8 text-2xl font-semibold text-stone-100">Contact Us</h2>
+    <address class="not-italic mt-3 text-stone-300">
+      Cornerstone Acquisitions LLC<br>
+      Email: <a class="text-emerald-400 underline" href="mailto:outreach@cornerstoneacquisitionsllc.com">outreach@cornerstoneacquisitionsllc.com</a><br>
+      Phone: [Insert Company Phone]
+    </address>
+
+    <p class="mt-8"><a href="/terms.html" class="text-emerald-400 underline">View our Terms &amp; Conditions</a></p>
+        </section>
+<section id="terms" class="py-20 bg-stone-800">
+<h1 class="text-3xl md:text-4xl font-bold text-stone-100">Terms &amp; Conditions</h1>
+    <p class="mt-2 text-stone-400">Effective Date: <span class="font-medium">[Insert Date]</span></p>
+
+    <p class="mt-6">By using our website or opting into our SMS program, you agree to these Terms &amp; Conditions.</p>
+
+    <h2 class="mt-8 text-2xl font-semibold text-stone-100">SMS Program Disclosures (Carrier-Required)</h2>
+    <ol class="list-decimal pl-6 mt-3 space-y-3 text-stone-300">
+      <li><span class="font-semibold">Program Name:</span> Cornerstone Acquisitions Alerts</li>
+      <li><span class="font-semibold">Program Description:</span> SMS messages may include new land deals, appointment reminders, status updates, and occasional promotional opportunities related to Cornerstone Acquisitions LLC.</li>
+      <li><span class="font-semibold">Opt-Out:</span> You can cancel the SMS service at any time by texting <span class="font-mono">STOP</span>. After you send <span class="font-mono">STOP</span>, we will send a confirmation message and you will no longer receive SMS messages. To rejoin, opt in again on our website.</li>
+      <li><span class="font-semibold">Help:</span> For support, reply <span class="font-mono">HELP</span> or email <a class="text-emerald-400 underline" href="mailto:outreach@cornerstoneacquisitionsllc.com">outreach@cornerstoneacquisitionsllc.com</a>.</li>
+      <li><span class="font-semibold">Carrier Liability:</span> Carriers are not liable for delayed or undelivered messages.</li>
+      <li><span class="font-semibold">Rates &amp; Frequency:</span> Message and data rates may apply. Message frequency varies. For privacy-related inquiries, please see our <a class="text-emerald-400 underline" href="/privacy.html">Privacy Policy</a>.</li>
+    </ol>
+
+    <h2 class="mt-8 text-2xl font-semibold text-stone-100">Website Terms</h2>
+    <ul class="list-disc pl-6 mt-3 space-y-2 text-stone-300">
+      <li>Content is provided for informational purposes and may change without notice.</li>
+      <li>We do not warrant uninterrupted or error-free operation of the site.</li>
+      <li>By submitting a form, you represent that the information you provide is accurate and that you are the subscriber or customary user of the phone number provided.</li>
+    </ul>
+
+    <p class="mt-8"><a href="/privacy.html" class="text-emerald-400 underline">View our Privacy Policy</a></p>
+        </section>
 </body>
 </html>
