@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CORNERSTONE ACQUISITIONS</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    section{scroll-margin-top:96px}
-  </style>
   <script>
     tailwind.config = {
       theme: { extend: { fontFamily: { sans: ['Inter','sans-serif'] } } }
@@ -28,24 +23,22 @@
         <a id="nav-buy" href="#buy-sell" class="hover:text-emerald-400 transition-colors">Buy</a>
         <a href="#about" class="hover:text-emerald-400 transition-colors">About Us</a>
         <a href="#careers" class="hover:text-emerald-400 transition-colors">Careers</a>
-        <!-- policies now point to standalone pages -->
         <a href="privacy.html" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
         <a href="terms.html" class="hover:text-emerald-400 transition-colors">Terms &amp; Conditions</a>
-        <a href="#contact" class="bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-semibold px-4 py-2 rounded-lg transition-colors">Contact</a>
+        <a href="optin.html" class="bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-semibold px-4 py-2 rounded-lg transition-colors">Opt-In Form</a>
       </div>
-      <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Open menu">
-        <svg class="w-6 h-6 text-stone-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-stone-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
       </button>
     </nav>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-700">
+    <div id="mobile-menu" class="hidden md:hidden">
       <a id="m-sell" href="#buy-sell" class="block py-2 px-6 text-sm hover:bg-stone-700">Sell</a>
       <a id="m-buy" href="#buy-sell" class="block py-2 px-6 text-sm hover:bg-stone-700">Buy</a>
       <a href="#about" class="block py-2 px-6 text-sm hover:bg-stone-700">About Us</a>
       <a href="#careers" class="block py-2 px-6 text-sm hover:bg-stone-700">Careers</a>
       <a href="privacy.html" class="block py-2 px-6 text-sm hover:bg-stone-700">Privacy Policy</a>
       <a href="terms.html" class="block py-2 px-6 text-sm hover:bg-stone-700">Terms &amp; Conditions</a>
-      <a href="#contact" class="block py-2 px-6 text-sm hover:bg-stone-700">Contact</a>
+      <a href="optin.html" class="block py-2 px-6 text-sm hover:bg-stone-700">Opt-In Form</a>
     </div>
   </header>
 
@@ -60,93 +53,33 @@
         <p class="mt-4 text-lg md:text-xl text-stone-300 max-w-3xl mx-auto">We connect motivated sellers with qualified buyers, creating seamless, profitable wholesale real estate transactions.</p>
         <div class="mt-8 flex justify-center gap-4">
           <a href="#buy-sell" class="bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-semibold px-8 py-3 rounded-lg transition-colors text-lg">Find Properties</a>
-          <a href="#contact" class="bg-stone-600 hover:bg-stone-700 text-stone-100 font-semibold px-8 py-3 rounded-lg transition-colors text-lg">Sell Your Property</a>
+          <a href="optin.html" class="bg-stone-600 hover:bg-stone-700 text-stone-100 font-semibold px-8 py-3 rounded-lg transition-colors text-lg">Sell Your Property</a>
         </div>
       </div>
     </section>
 
-    <!-- Who We Work With / Toggle -->
+    <!-- Buy/Sell Section -->
     <section id="buy-sell" class="py-20 bg-stone-700">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-stone-100">Who We Work With &amp; How It Works</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-stone-100">Who We Work With & How It Works</h2>
           <p class="mt-4 text-stone-300 max-w-2xl mx-auto">Whether you're looking to sell a property quickly or find your next investment, we have a streamlined process for you.</p>
         </div>
-
-        <!-- Segmented Tabs -->
         <div class="flex justify-center mb-8">
           <div class="bg-stone-800 p-1 rounded-lg flex space-x-1">
             <button id="sellers-btn" class="px-6 py-2 rounded-md text-sm font-medium transition-colors bg-emerald-600 text-white">For Sellers</button>
             <button id="buyers-btn" class="px-6 py-2 rounded-md text-sm font-medium transition-colors text-stone-300 hover:bg-stone-600">For Buyers</button>
           </div>
         </div>
-
-        <!-- Sellers content -->
-        <div id="sellers-content" class="grid md:grid-cols-3 gap-8 text-center">
-          <div class="bg-stone-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-emerald-400 mb-2">1. Submit Your Property</h3>
-            <p class="text-stone-400">Fill out our simple form with your property details. It's fast, free, and confidential.</p>
-          </div>
-          <div class="bg-stone-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-emerald-400 mb-2">2. Get a Fair Offer</h3>
-            <p class="text-stone-400">We'll assess your property and present you with a no-obligation cash offer quickly.</p>
-          </div>
-          <div class="bg-stone-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-emerald-400 mb-2">3. Close On Your Time</h3>
-            <p class="text-stone-400">If you accept, we'll handle the paperwork and close on your schedule. No repairs, no fees.</p>
-          </div>
+        <div id="sellers-content" class="grid md:grid-cols-3 gap-8 text-center transition-opacity duration-300">
+          <div class="bg-stone-800 p-6 rounded-lg"><h3 class="text-xl font-semibold text-emerald-400 mb-2">1. Submit Your Property</h3><p class="text-stone-400">Fill out our simple form with your property details. It's fast, free, and confidential.</p></div>
+          <div class="bg-stone-800 p-6 rounded-lg"><h3 class="text-xl font-semibold text-emerald-400 mb-2">2. Get a Fair Offer</h3><p class="text-stone-400">We'll assess your property and present you with a no-obligation cash offer quickly.</p></div>
+          <div class="bg-stone-800 p-6 rounded-lg"><h3 class="text-xl font-semibold text-emerald-400 mb-2">3. Close On Your Time</h3><p class="text-stone-400">If you accept, we'll handle the paperwork and close on your schedule. No repairs, no fees.</p></div>
         </div>
-
-        <!-- Buyers content -->
-        <div id="buyers-content" class="hidden grid md:grid-cols-3 gap-8 text-center">
-          <div class="bg-stone-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-emerald-400 mb-2">1. Join Our List</h3>
-            <p class="text-stone-400">Sign up to get exclusive access to our list of off-market investment properties.</p>
-          </div>
-          <div class="bg-stone-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-emerald-400 mb-2">2. Review Deals</h3>
-            <p class="text-stone-400">We send you properties that match your criteria, complete with all the necessary details.</p>
-          </div>
-          <div class="bg-stone-800 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-emerald-400 mb-2">3. Make Your Move</h3>
-            <p class="text-stone-400">Found the right one? We'll help you secure the deal and move toward a fast, easy closing.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="py-20 bg-stone-800">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-stone-100">How We Help You</h2>
-          <p class="mt-4 text-stone-300 max-w-2xl mx-auto">We provide unique advantages for both property sellers and cash buyers.</p>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.75A.75.75 0 013 4.5h.75m0 0h.75A.75.75 0 015.25 6v.75m0 0v.75A.75.75 0 014.5 8.25h-.75m0 0H3.75a.75.75 0 01-.75-.75V7.5m0 0v-.75A.75.75 0 013 6h.75M7.5 12h.008v.008H7.5V12z"/></svg></div>
-            <div><h3 class="text-xl font-semibold text-stone-100">Fast Cash Offers</h3><p class="mt-1 text-stone-400">Sellers receive competitive cash offers, eliminating financing contingencies and delays.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.75"/></svg></div>
-            <div><h3 class="text-xl font-semibold text-stone-100">Exclusive Inventory</h3><p class="mt-1 text-stone-400">Buyers get access to off-market properties they won't find anywhere else.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div><h3 class="text-xl font-semibold text-stone-100">No Hassle, No Fees</h3><p class="mt-1 text-stone-400">We buy properties as-is. No need for repairs, cleaning, or agent commissions.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664M6.75 8.25l4.5 4.5 4.5-4.5"/></svg></div>
-            <div><h3 class="text-xl font-semibold text-stone-100">Deeply Discounted Prices</h3><p class="mt-1 text-stone-400">Investor partners benefit from properties priced below market value.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div><h3 class="text-xl font-semibold text-stone-100">Flexible Closing</h3><p class="mt-1 text-stone-400">Sellers choose a closing date that works for them.</p></div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0"><svg class="w-8 h-8 text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375"/></svg></div>
-            <div><h3 class="text-xl font-semibold text-stone-100">Expert Team</h3><p class="mt-1 text-stone-400">We handle the complexities for a smooth process.</p></div>
-          </div>
+        <div id="buyers-content" class="hidden grid md:grid-cols-3 gap-8 text-center transition-opacity duration-300">
+          <div class="bg-stone-800 p-6 rounded-lg"><h3 class="text-xl font-semibold text-emerald-400 mb-2">1. Join Our List</h3><p class="text-stone-400">Sign up to get exclusive access to our list of off-market investment properties.</p></div>
+          <div class="bg-stone-800 p-6 rounded-lg"><h3 class="text-xl font-semibold text-emerald-400 mb-2">2. Review Deals</h3><p class="text-stone-400">We send you properties that match your criteria, complete with all the necessary details.</p></div>
+          <div class="bg-stone-800 p-6 rounded-lg"><h3 class="text-xl font-semibold text-emerald-400 mb-2">3. Make Your Move</h3><p class="text-stone-400">Found the right one? We'll help you secure the deal and move toward a fast, easy closing.</p></div>
         </div>
       </div>
     </section>
@@ -158,12 +91,10 @@
           <div>
             <h2 class="text-3xl md:text-4xl font-bold text-stone-100">Built on a Foundation of Trust</h2>
             <p class="mt-4 text-stone-300">Cornerstone Acquisitions LLC was founded on the principles of integrity, transparency, and creating win-win scenarios. We provide a reliable and efficient marketplace for off-market properties.</p>
-            <p class="mt-4 text-stone-300">We are more than just wholesalers; we are problem-solvers and relationship-builders dedicated to serving our community.</p>
-            <a href="#contact" class="mt-6 inline-block bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-semibold px-6 py-3 rounded-lg transition-colors">Learn More About Us</a>
+            <p class="mt-4 text-stone-300">We are problem-solvers and relationship-builders dedicated to serving our community.</p>
+            <a href="optin.html" class="mt-6 inline-block bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-semibold px-6 py-3 rounded-lg transition-colors">Learn More About Us</a>
           </div>
-          <div>
-            <img src="about-us-image.png" alt="A modern building" class="rounded-lg shadow-xl w-full h-auto object-cover">
-          </div>
+          <div><img src="about-us-image.png" alt="About us" class="rounded-lg shadow-xl w-full h-auto object-cover"></div>
         </div>
       </div>
     </section>
@@ -172,55 +103,8 @@
     <section id="careers" class="py-20 bg-stone-700">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-stone-100">Join Our Team</h2>
-        <p class="mt-4 text-stone-300 max-w-2xl mx-auto">We’re always looking for talented and driven individuals.</p>
-        <a href="#contact" class="mt-6 inline-block bg-stone-600 hover:bg-stone-500 text-stone-100 font-semibold px-8 py-3 rounded-lg transition-colors text-lg">See Open Positions</a>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-20 bg-stone-800">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-stone-100">Get In Touch</h2>
-          <p class="mt-4 text-stone-300 max-w-2xl mx-auto">Have a question or a property to discuss? Send us a message and we'll get back to you promptly.</p>
-        </div>
-
-        <form id="contact-form" class="max-w-xl mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <input name="name" type="text" placeholder="Full Name" class="w-full bg-stone-700 text-stone-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500" required>
-            <input name="email" type="email" placeholder="Email" class="w-full bg-stone-700 text-stone-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500" required>
-          </div>
-          <div class="mb-6">
-            <input name="phone" type="tel" placeholder="Phone" class="w-full bg-stone-700 text-stone-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-          </div>
-          <div class="mb-6">
-            <textarea name="message" placeholder="Your Message" rows="5" class="w-full bg-stone-700 text-stone-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500" required></textarea>
-          </div>
-
-          <!-- A2P-required consent -->
-          <div class="space-y-4 mb-6 text-sm">
-            <label class="flex items-start space-x-3">
-              <input type="checkbox" name="sms_alerts" required class="mt-1 h-4 w-4 rounded border-stone-500 bg-stone-700 text-emerald-600 focus:ring-emerald-500">
-              <span>
-                I consent to receive SMS notifications and alerts from Cornerstone Acquisitions LLC. Message frequency varies. Message &amp; data rates may apply.
-                Reply <span class="font-mono">STOP</span> to unsubscribe at any time and <span class="font-mono">HELP</span> for assistance. Carriers are not liable for delayed or undelivered messages.
-              </span>
-            </label>
-            <label class="flex items-start space-x-3">
-              <input type="checkbox" name="sms_promotions" class="mt-1 h-4 w-4 rounded border-stone-500 bg-stone-700 text-emerald-600 focus:ring-emerald-500">
-              <span>I agree to receive occasional promotional SMS messages from Cornerstone Acquisitions LLC.</span>
-            </label>
-          </div>
-
-          <div class="text-center">
-            <button type="submit" class="bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-bold py-3 px-8 rounded-lg transition-colors">Send Message</button>
-          </div>
-
-          <div class="text-center text-xs mt-4">
-            <a href="privacy.html" class="underline text-emerald-400">Privacy Policy</a> •
-            <a href="terms.html" class="underline text-emerald-400">Terms &amp; Conditions</a>
-          </div>
-        </form>
+        <p class="mt-4 text-stone-300 max-w-2xl mx-auto">We are always looking for talented and driven individuals to join the Cornerstone family. If you have a passion for real estate and helping people, we'd love to hear from you.</p>
+        <a href="optin.html" class="mt-6 inline-block bg-stone-600 hover:bg-stone-500 text-stone-100 font-semibold px-8 py-3 rounded-lg transition-colors text-lg">See Open Positions</a>
       </div>
     </section>
   </main>
@@ -235,56 +119,49 @@
         <a href="#careers" class="hover:text-emerald-400 transition-colors">Careers</a>
         <a href="privacy.html" class="hover:text-emerald-400 transition-colors">Privacy</a>
         <a href="terms.html" class="hover:text-emerald-400 transition-colors">Terms</a>
-        <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+        <a href="optin.html" class="hover:text-emerald-400 transition-colors">Opt-In</a>
       </div>
       <p class="mt-8 text-sm">&copy; 2024 Cornerstone Acquisitions LLC. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // mobile menu
-    const menuBtn = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.addEventListener('DOMContentLoaded', function () {
+      function activate(mode) {
+        const sellersBtn = document.getElementById('sellers-btn');
+        const buyersBtn  = document.getElementById('buyers-btn');
+        const sellers = document.getElementById('sellers-content');
+        const buyers  = document.getElementById('buyers-content');
+        if (!sellersBtn || !buyersBtn || !sellers || !buyers) return;
 
-    // toggle Buyers/Sellers
-    function activate(mode) {
-      const sellersBtn = document.getElementById('sellers-btn');
-      const buyersBtn  = document.getElementById('buyers-btn');
-      const sellers    = document.getElementById('sellers-content');
-      const buyers     = document.getElementById('buyers-content');
-      if(!sellersBtn||!buyersBtn||!sellers||!buyers) return;
+        const activeClasses = ['bg-emerald-600','text-white'];
+        const inactiveClasses = ['text-stone-300','hover:bg-stone-600'];
 
-      const active = ['bg-emerald-600','text-white'];
-      const inactive = ['text-stone-300','hover:bg-stone-600'];
-
-      if (mode === 'sell') {
-        sellersBtn.classList.add(...active); sellersBtn.classList.remove(...inactive);
-        buyersBtn.classList.remove(...active); buyersBtn.classList.add(...inactive);
-        sellers.classList.remove('hidden'); buyers.classList.add('hidden');
-      } else {
-        buyersBtn.classList.add(...active); buyersBtn.classList.remove(...inactive);
-        sellersBtn.classList.remove(...active); sellersBtn.classList.add(...inactive);
-        buyers.classList.remove('hidden'); sellers.classList.add('hidden');
+        if (mode === 'sell') {
+          sellersBtn.classList.add(...activeClasses);
+          sellersBtn.classList.remove(...inactiveClasses);
+          buyersBtn.classList.remove(...activeClasses);
+          buyersBtn.classList.add(...inactiveClasses);
+          sellers.classList.remove('hidden');
+          buyers.classList.add('hidden');
+        } else {
+          buyersBtn.classList.add(...activeClasses);
+          buyersBtn.classList.remove(...inactiveClasses);
+          sellersBtn.classList.remove(...activeClasses);
+          sellersBtn.classList.add(...inactiveClasses);
+          buyers.classList.remove('hidden');
+          sellers.classList.add('hidden');
+        }
       }
-    }
-    // header + mobile taps toggle the segment
-    [['nav-buy','buy'],['m-buy','buy'],['nav-sell','sell'],['m-sell','sell']].forEach(([id,mode])=>{
-      const el = document.getElementById(id);
-      el && el.addEventListener('click', ()=> setTimeout(()=>activate(mode),0));
-    });
-    // in-widget buttons
-    document.getElementById('sellers-btn')?.addEventListener('click',()=>activate('sell'));
-    document.getElementById('buyers-btn')?.addEventListener('click',()=>activate('buy'));
-    // default state
-    activate('sell');
-
-    // basic form stub
-    document.getElementById('contact-form')?.addEventListener('submit',(e)=>{
-      e.preventDefault();
-      alert('Thanks! Your message has been recorded.');
-      e.target.reset();
+      const navBuy = document.getElementById('nav-buy');
+      const navSell = document.getElementById('nav-sell');
+      const mBuy = document.getElementById('m-buy');
+      const mSell = document.getElementById('m-sell');
+      [navBuy, mBuy].forEach(el => el && el.addEventListener('click', () => setTimeout(()=>activate('buy'), 0)));
+      [navSell, mSell].forEach(el => el && el.addEventListener('click', () => setTimeout(()=>activate('sell'), 0)));
+      document.getElementById('sellers-btn').addEventListener('click', () => activate('sell'));
+      document.getElementById('buyers-btn').addEventListener('click', () => activate('buy'));
+      activate('sell');
     });
   </script>
 </body>

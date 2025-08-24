@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opt-In Form | Cornerstone Acquisitions LLC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter','sans-serif'] } } }
+    };
+  </script>
+</head>
+<body class="bg-stone-800 text-stone-300 font-sans">
+  <main class="py-20">
+    <div class="container mx-auto px-6 max-w-xl">
+      <h1 class="text-3xl md:text-4xl font-bold text-stone-100 text-center mb-8">Opt-In Form</h1>
+      <form id="optin-form" class="space-y-6 bg-stone-700 p-8 rounded-lg shadow-lg">
+        <input type="text" name="name" placeholder="Your Name" required
+          class="w-full bg-stone-800 text-stone-200 border-stone-600 rounded-lg p-3 focus:ring-2 focus:ring-emerald-500">
+        <input type="email" name="email" placeholder="Your Email" required
+          class="w-full bg-stone-800 text-stone-200 border-stone-600 rounded-lg p-3 focus:ring-2 focus:ring-emerald-500">
+        <input type="tel" name="phone" placeholder="Your Phone Number"
+          class="w-full bg-stone-800 text-stone-200 border-stone-600 rounded-lg p-3 focus:ring-2 focus:ring-emerald-500">
+
+        <!-- Compliance checkboxes -->
+        <label class="flex items-start space-x-3 text-sm">
+          <input type="checkbox" required
+            class="mt-1 h-4 w-4 rounded border-stone-500 bg-stone-800 text-emerald-600 focus:ring-emerald-500">
+          <span>I consent to receive SMS notifications and alerts from Cornerstone Acquisitions LLC.
+            Message frequency varies. Message &amp; data rates may apply. Reply <span class="font-mono">STOP</span> to unsubscribe, <span class="font-mono">HELP</span> for help. Carriers are not liable for delayed or undelivered messages.
+          </span>
+        </label>
+
+        <label class="flex items-start space-x-3 text-sm">
+          <input type="checkbox"
+            class="mt-1 h-4 w-4 rounded border-stone-500 bg-stone-800 text-emerald-600 focus:ring-emerald-500">
+          <span>I agree to receive occasional promotional SMS messages from Cornerstone Acquisitions LLC.</span>
+        </label>
+
+        <div class="text-center">
+          <button type="submit"
+            class="bg-emerald-600 hover:bg-emerald-700 text-stone-100 font-bold py-3 px-8 rounded-lg transition-colors">
+            Submit Opt-In
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('optin-form').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      alert('Thanks for opting in! Your consent has been recorded.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
